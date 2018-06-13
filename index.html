@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">     <link rel="stylesheet" href="css/style.css">
+    <title>Cryptocurrency Web App</title>
+</head>
+<body>
+    <div class="row">
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Market Cap</td>
+                        <td>24h Volume</td>
+                        <td>1h</td>
+                        <td>24h</td>
+                    </tr>
+                </thead>
+                <tbody id="content">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script id="entry-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <tr>
+            <td>{{rank}}</td>
+            <td>{{name}}</td>
+            <td>${{quotes.USD.price}}</td>
+            <td>{{quotes.USD.market_cap}}</td>
+            <td>${{quotes.USD.volume_24h}}</td>
+            <td>{{quotes.USD.percent_change_1h}}</td>
+            <td>{{quotes.USD.percent_change_24h}}</td>
+        </tr>
+        {{/each}}
+    </script>
+
+    <script src="js/handlebars-v4.0.11.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
