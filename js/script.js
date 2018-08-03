@@ -25,5 +25,3 @@
     app.send();
     setTimeout(cryptoApp, 20000)
 })()
-
-// https://https://s2.coinmarketcap.com/static/img/coins/16x16/1.png
